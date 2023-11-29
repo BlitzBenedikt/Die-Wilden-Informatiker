@@ -7,15 +7,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<style>
         body {
-            background: linear-gradient(to right, #AFEEEE,#90EE90);
+            background-image: url('Bilder/Erde001.png');
+            background-size: 80px auto;
         }
         h1 {
-            color: #1E90FF;
+            color: #ffffff;
+        }
+		h3 {
+            color: #ffffff;
+        }
+		h4 {
+            color: #ffffff;
+        }
+        .schnee {
+            background-image: url('Bilder/Schnee001.png');
+            background-size: auto 90px;
+            position: relative;
+            border: 90px;
+            display: inline-block;
+            padding: 45px 50%;
         }
         .navbar {
-            background: linear-gradient(to right, #1E90FF,#228B22);
-			
-			
+            background-image: url('Bilder/Schneelandschaft001+002+003+004.png.jpg');
+            background-size: auto 90px;
+            color: white;
         }
         .navbar-brand {
             color: white;
@@ -27,6 +42,7 @@
 		}
 		p {
 			font-weight: bold;
+            color: #ffffff;
 		}
 		@keyframes alpaka-animation {
 			0% { left: -100px; }
@@ -35,7 +51,7 @@
 		.alpaka-container {
         position: absolute;
         z-index: -1;
-        animation: alpaka-animation 30s linear infinite;
+        animation: alpaka-animation 60s linear infinite;
 		}
 		.navbar {
 			z-index: 6;
@@ -45,14 +61,19 @@
 			z-index: 1;
 			position: relative;
 		}
-		
+		li {
+            color: #ffffff;
+        }
+        a {
+            color: #c0c0c0;
+        }
     </style>
 </head>
 <body>
 	
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="alpaka-container">
-			<a class="navbar-brand"  ><img src="Bilder\Alpaka-ohne.png" alt="Alpaka" style="width: 90px;"></a>
+			<video width="80" height="80" autoplay loop><source src="Bilder\AlpaChinoWeihnachten001.webm" type="video/webm"></video>
 		</div>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
 		aria-label="Toggle navigation">
@@ -69,10 +90,13 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Bilder <span class="sr-only">(aktuell)</span></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Kurs.html">Kurs</a>
+                </li>
             </ul>
         </div>
     </nav>
-    
+    <schnee class="schnee schnee-expand-lg schnee-light "></schnee>
 	<div class="container">
     <h1>Bilder</h1>
     <div class="row">
