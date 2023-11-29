@@ -23,8 +23,10 @@
             padding: 45px 50%;
         }
         .navbar {
-            background-image: url('Bilder/Schneelandschaft001+002+003+004.png.jpg');
-            background-size: auto 90px;
+            background-image: 
+			url('Bilder/Schneelandschaft001+002+003+004.png.jpg');
+            background-size: cover;
+			background-repeat: no-repeat;
             color: white;
         }
         .navbar-brand {
@@ -45,8 +47,17 @@
 		}
 		.alpaka-container {
         position: absolute;
-        z-index: -1;
+        z-index: 7;
         animation: alpaka-animation 60s linear infinite;
+		}
+		.alpaka-container video {
+			width: 80px;
+			height: 80px;
+			object-fit: contain;
+		}
+		@media (max-width: 600px) {
+			.alpaka-container video {
+			width: 50%;
 		}
 		.navbar {
 			z-index: 6;
