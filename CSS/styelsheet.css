@@ -15,7 +15,7 @@ h4 {
         color: #ffffff;
 }
 .schnee {
-        background-image: url('Bilder/Schnee001.png');
+        background-image: url('../Bilder/Schnee001.png');
         background-size: auto 90px;
         position: relative;
         border: 95px;
@@ -25,7 +25,7 @@ h4 {
         padding: 45px 50%;
 }
 .navbar {
-        background-image: url('Bilder/Schneelandschaft001+002+003+004.png.jpg');
+        background-image: url('../Bilder/Schneelandschaft001+002+003+004.png.jpg');
         background-size: cover;
 	background-repeat: no-repeat;
         color: white;
@@ -74,4 +74,41 @@ li {
 }
 a {
         color: #c0c0c0;
+}
+.door {
+    width: 100px; 
+    height: 100px; 
+    border: 1px solid black;
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+    line-height: 100px; 
+    cursor: pointer;
+    background-color: #f0768b;
+    color: black;
+	font-weight: bold;
+	font-size: 50px; 
+    background-image: url('../Bilder/Advent.jpeg'); 
+    background-size: cover; 
+}
+#question {
+    color: black;
+}
+.modal-content {
+    background-color: #f8f8f8; /* Ändern Sie die Hintergrundfarbe des Modals */
+    border: 2px solid #5c5c5c; /* Fügen Sie einen Rand hinzu */
+    border-radius: 10px; /* Runden Sie die Ecken ab */
+}
+
+.modal-header {
+    background-color: #c0c0c0; /* Ändern Sie die Hintergrundfarbe des Modal-Headers */
+    color: #000000; /* Ändern Sie die Textfarbe */
+}
+
+.modal-body {
+    color: #000000; /* Ändern Sie die Textfarbe im Modal-Body */
+}
+
+.modal-footer {
+    background-color: #c0c0c0; /* Ändern Sie die Hintergrundfarbe des Modal-Footers */
 }
