@@ -1,77 +1,74 @@
-
-        body {
-            background-image: url('Bilder/Erde001.png');
-            background-size: 80px auto;
-			max-width: 100%;
-			overflow-x: hidden;
-        }
-        h1 {
-            color: #ffffff;
-        }
-		h3 {
-            color: #ffffff;
-        }
-		h4 {
-            color: #ffffff;
-        }
-        .schnee {
-            background-image: url('Bilder/Schnee001.png');
-            background-size: auto 90px;
-            position: relative;
-            border: 95px;
-            display: inline-block;
-            padding: 45px 50%;
-        }
-        .navbar {
-            background-image: 
-			url('Bilder/Schneelandschaft001+002+003+004.png.jpg');
-            background-size: cover;
-			background-repeat: no-repeat;
-            color: white;
-        }
-        .navbar-brand {
-            color: white;
-        }
+body {
+	background-image: url('Bilder/Erde001.png');
+	background-size: 80px auto;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+h1 {
+        color: #ffffff;
+}
+h3 {
+        color: #ffffff;
+}
+h4 {
+        color: #ffffff;
+}
+.schnee {
+        background-image: url('Bilder/Schnee001.png');
+        background-size: auto 90px;
+        position: relative;
+        border: 95px;
+        display: inline-block;
+        padding: 45px 50%;
+}
+.navbar {
+        background-image: url('Bilder/Schneelandschaft001+002+003+004.png.jpg');
+        background-size: cover;
+	background-repeat: no-repeat;
+        color: white;
+}
+.navbar-brand {
+        color: white;
+}
 		
-		.navbar-nav .nav-link {
-			font-weight: bold;
-			font-size: 25px;
-		}
-		p {
-			font-weight: bold;
-            color: #ffffff;
-		}
-		@keyframes alpaka-animation {
-			0% { left: -100px; }
-			100% { left: 100%; }
-		}
-		.alpaka-container {
+.navbar-nav .nav-link {
+	font-weight: bold;
+	font-size: 25px;
+}
+p {
+	font-weight: bold;
+        color: #ffffff;
+}
+@keyframes alpaka-animation {
+	0% { left: -100px; }
+	100% { left: 100%; }
+}
+.alpaka-container {
         position: absolute;
         z-index: 7;
         animation: alpaka-animation 60s linear infinite;
-		}
-		.alpaka-container video {
-			object-fit: contain;
-		}
-		@media (max-width: 600px) {
-			*{
-				width: 100%;
-			}
-			.alpaka-container video {
-			width: 50%;
-		}
-		.navbar {
-			z-index: 6;
-			position: relative;
-		}
-		.container {
-			z-index: 1;
-			position: relative;
-			width: 100%;
-		}
-		li {
-            color: #ffffff;
-        }
-        a {
-            color: #c0c0c0;
-        }
+}
+.alpaka-container video {
+	object-fit: contain;
+}
+@media (max-width: 600px) {
+	width: 100%;
+}
+.alpaka-container video {
+	width: 50%;
+}
+.navbar {
+	z-index: 6;
+	position: relative;
+}
+.container {
+	z-index: 1;
+	position: relative;
+	width: 100%;
+}
+li {
+        color: #ffffff;
+}
+a {
+        color: #c0c0c0;
+}
