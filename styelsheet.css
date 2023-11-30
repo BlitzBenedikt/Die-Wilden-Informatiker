@@ -19,6 +19,7 @@ h4 {
         position: relative;
         border: 95px;
         display: inline-block;
+	hight: 90px;
         padding: 45px 50%;
 }
 .navbar {
