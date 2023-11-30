@@ -1,5 +1,6 @@
 body {
-	background-image: url('Bilder/Erde001.png');
+	/* background-image: url('Bilder/Erde001.png'); */
+	background-color:#ffffff;
 	background-size: 80px auto;
 	max-width: 100%;
 	overflow-x: hidden;
