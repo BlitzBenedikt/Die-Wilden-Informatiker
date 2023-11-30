@@ -20,6 +20,7 @@ h4 {
         border: 95px;
         display: inline-block;
 	hight: 90px;
+	width: auto;
         padding: 45px 50%;
 }
 .navbar {
