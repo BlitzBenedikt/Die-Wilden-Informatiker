@@ -20,7 +20,7 @@ h4 {
         position: relative;
         border: 95px;
         display: inline-block;
-	hight: 85px;
+	hight: 70px;
 	width: auto;
         padding: 45px 50%;
 }
@@ -58,7 +58,7 @@ p {
 	width: 100%;
 }
 .alpaka-container video {
-	width: 65%;
+	width: 70%;
 }
 .navbar {
 	z-index: 6;
