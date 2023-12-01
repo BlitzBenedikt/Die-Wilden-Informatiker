@@ -27,7 +27,7 @@ h4 {
 .navbar {
         background-image: url('../Bilder/Schneelandschaft001+002+003+004.png.jpg');
         background-size: cover;
-	background-repeat: no-repeat;
+		background-repeat: no-repeat;
         color: white;
 }
 .navbar-brand {
@@ -48,7 +48,7 @@ p {
 }
 .alpaka-container {
         position: absolute;
-        z-index: 7;
+        z-index: -1;
         animation: alpaka-animation 60s linear infinite;
 }
 .alpaka-container video {
@@ -65,7 +65,7 @@ p {
 	position: relative;
 }
 .container {
-	z-index: 1;
+	z-index: 6;
 	position: relative;
 	width: 100%;
 }
