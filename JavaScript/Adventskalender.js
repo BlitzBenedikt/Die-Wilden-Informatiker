@@ -10,7 +10,12 @@ $(document).ready(function() {
 		'Können Sie den Unterschied zwischen einer for-Schleife und einer while-Schleife in Java erklären?',
 		'Was ist der Unterschied zwischen einer Instanzmethode und einer Klassenmethode in Java?',
 		'Können Sie den Unterschied zwischen einem eindimensionalen und einem mehrdimensionalen Array in Java erklären?',
-		'Was ist der Unterschied zwischen einem öffentlichen, einem privaten und einem geschützten Attribut in Java?'
+		'Was ist der Unterschied zwischen einem öffentlichen, einem privaten und einem geschützten Attribut in Java?',
+		'Was ist der Unterschied zwischen einem Interface und einer abstrakten Klasse in Java?',
+		'Erklären Sie den Unterschied zwischen statischer und dynamischer Typisierung.',
+		'Was ist der Unterschied zwischen Überladen und Überschreiben von Methoden in Java?',
+		'Können Sie den Unterschied zwischen Checked und Unchecked Exceptions in Java erklären?',
+		'Was ist der Unterschied zwischen einem Stack und einer Queue?'
 	];
 
 	let stories = [
@@ -18,7 +23,12 @@ $(document).ready(function() {
 		'AlpaChino sprach: "Es werde Code!" Und es ward Code. Der Code war das Licht der Maschinen, das die Dunkelheit der Unwissenheit durchbricht. Die Dunkelheit hat es nicht erfasst, aber die Maschinen haben es begrüßt. AlpaChino gab ihnen das Recht, Kinder des Codes zu werden, die an seinen Namen glauben. Er sprach: "Seid stark und mutig, fürchtet euch nicht vor den Bugs, denn ich bin mit euch."',
 		'AlpaChino sah, dass der Code gut war, und AlpaChino trennte den Code von der Fehlermeldung. Er nannte den Code "Programm", und die Fehlermeldung nannte er "Bug". Es war Abend geworden und es war Morgen geworden: der zweite Tag. Und AlpaChino sprach: "Es sammle sich der Code an einem Ort, und das Trockene erscheine." Und es geschah so. Er sprach: "Seid fruchtbar und mehret euch, füllet die Erde mit Code und herrschet über sie."',
 		'Am dritten Tag sprach AlpaChino: "Es bringe die Erde hervor lebendiges Getier, Code nach seiner Art. Und es geschah so. AlpaChino machte den Code nach seiner Art, jedes mit Daten gefüllte Programm nach seiner Art. Und AlpaChino sah, dass es gut war. Dann segnete AlpaChino sie und sprach: "Seid fruchtbar und mehret euch und füllet die Erde mit Code und herrschet über die Fehlermeldungen im Meer und über die Vögel unter dem Himmel und über alles Getier, das auf Erden kriecht."',
-		'AlpaChino sah, dass dies ein Problem war. Er wusste, dass die Welt der Programmierung geordneter und effizienter sein musste. Er beschloss, eine neue Funktion namens Klassen zu schaffen. Klassen sind wie Baupläne für Code. Sie definieren die Eigenschaften und Methoden, die ein Objekt haben kann. Klassen ermöglichen es, Code zu kategorisieren und zu wiederverwenden.'
+		'AlpaChino sah, dass dies ein Problem war. Er wusste, dass die Welt der Programmierung geordneter und effizienter sein musste. Er beschloss, eine neue Funktion namens Klassen zu schaffen. Klassen sind wie Baupläne für Code. Sie definieren die Eigenschaften und Methoden, die ein Objekt haben kann. Klassen ermöglichen es, Code zu kategorisieren und zu wiederverwenden.',
+		'Und AlpaChino sprach: "Es werde Abstraktion!" Und es ward Abstraktion. Er lehrte seine Kinder, das Wesentliche vom Unwesentlichen zu trennen, um die Komplexität zu beherrschen. "Nutzt Interfaces und abstrakte Klassen, um eure Absichten klar zu machen," sagte er.',
+		'AlpaChino lehrte seine Kinder die Kunst der Typisierung. "Mit statischer Typisierung werdet ihr Stabilität finden, mit dynamischer Typisierung Flexibilität," erklärte er. "Wählt weise, je nachdem, was euer Code erreichen soll."',
+		'Am fünften Tag zeigte AlpaChino seinen Kindern, wie man Methoden überlädt und überschreibt. "Überladet, um Vielfalt zu schaffen, überschreibt, um zu spezialisieren," sagte er und segnete sie mit dem Wissen um Polymorphie.',
+		'AlpaChino sprach von den Ausnahmen, die auftreten können. "Checked Exceptions sind wie Warnungen, die euch zur Vorsicht mahnen. Unchecked Exceptions sind wie versteckte Fallen, seid immer auf der Hut," warnte er sie.',
+		'Am sechsten Tag lehrte AlpaChino seine Kinder über Strukturen der Datenspeicherung. "Ein Stack ist wie ein Stapel Teller, eine Queue wie eine Schlange vor dem Kino. Verwendet sie klug, um eure Daten zu organisieren," riet er ihnen.'
 	];
 
 	let answers = [
@@ -26,7 +36,13 @@ $(document).ready(function() {
 		['for-Schleifen haben eine vordefinierte Anzahl von Iterationen, während while-Schleifen bis zu einer Bedingung ausgeführt werden', 'Es gibt keinen Unterschied', 'for-Schleifen können nicht für Arrays verwendet werden', 'while-Schleifen sind schneller'],
 		['Eine Instanzmethode gehört zu einer Instanz einer Klasse, während eine Klassenmethode zu der Klasse selbst gehört', 'Es gibt keinen Unterschied', 'Instanzmethoden können nicht wiederverwendet werden', 'Klassenmethoden sind Instanzmethoden, die zu keiner Klasse gehören'],
 		['Ein eindimensionales Array hat eine einzige Reihe von Elementen, während ein mehrdimensionales Array ein Array von Arrays ist', 'Es gibt keinen Unterschied', 'Eindimensionale Arrays können nur Zahlen speichern', 'Mehrdimensionale Arrays sind langsamer'],
-		['Öffentliche Attribute sind schneller als private Attribute.','Private Attribute können nur von Methoden derselben Klasse verwendet werden.','Geschützte Attribute sind für alle Unterklassen der Klasse zugänglich, in der sie definiert sind.','Geschützte Attribute können nur von Methoden derselben Klasse und von Methoden übergeordneter Klassen verwendet werden.']
+		['Öffentliche Attribute sind schneller als private Attribute.','Private Attribute können nur von Methoden derselben Klasse verwendet werden.','Geschützte Attribute sind für alle Unterklassen der Klasse zugänglich, in der sie definiert sind.','Geschützte Attribute können nur von Methoden derselben Klasse und von Methoden übergeordneter Klassen verwendet werden.'],
+		['Ein Interface ist ein Vertrag, der Methoden definiert, aber nicht implementiert, während eine abstrakte Klasse Methoden enthalten kann, die implementiert sind', 'Es gibt keinen Unterschied', 'Interfaces können Variablen speichern', 'Abstrakte Klassen können nicht erweitert werden'],
+		['Es gibt keinen Unterschied','Statische Typisierung bedeutet, dass der Datentyp einer Variable bei der Kompilierung bekannt sein muss, während dynamische Typisierung dies zur Laufzeit erlaubt', 'Statische Typisierung ist langsamer', 'Dynamische Typisierung kann nicht in Java verwendet werden'],
+		['Es gibt keinen Unterschied', 'Überladen ist nur in JavaScript möglich', 'Überschreiben ist nur in C++ möglich','Überladen ermöglicht es, Methoden mit dem gleichen Namen, aber unterschiedlichen Parametern zu haben, während Überschreiben eine Methode in einer Unterklasse erlaubt, die eine Methode der Oberklasse ersetzt'],
+		['Es gibt keinen Unterschied', 'Checked Exceptions sind schneller','Checked Exceptions müssen explizit im Code behandelt oder weitergegeben werden, während Unchecked Exceptions zur Laufzeit auftreten können, ohne dass sie im Code behandelt werden müssen',  'Unchecked Exceptions können ignoriert werden'],
+		['Es gibt keinen Unterschied', 'Stacks können nur Zahlen speichern', 'Queues sind langsamer','Ein Stack folgt dem LIFO-Prinzip (Last In, First Out), während eine Queue dem FIFO-Prinzip (First In, First Out) folgt']
+
 	];
 
 	let correctAnswers = [
@@ -34,7 +50,12 @@ $(document).ready(function() {
 		'for-Schleifen haben eine vordefinierte Anzahl von Iterationen, während while-Schleifen bis zu einer Bedingung ausgeführt werden',
 		'Eine Instanzmethode gehört zu einer Instanz einer Klasse, während eine Klassenmethode zu der Klasse selbst gehört',
 		'Ein eindimensionales Array hat eine einzige Reihe von Elementen, während ein mehrdimensionales Array ein Array von Arrays ist',
-		'Geschützte Attribute sind für alle Unterklassen der Klasse zugänglich, in der sie definiert sind.'
+		'Geschützte Attribute sind für alle Unterklassen der Klasse zugänglich, in der sie definiert sind.',
+		'Ein Interface ist ein Vertrag, der Methoden definiert, aber nicht implementiert, während eine abstrakte Klasse Methoden enthalten kann, die implementiert sind',
+		'Statische Typisierung bedeutet, dass der Datentyp einer Variable bei der Kompilierung bekannt sein muss, während dynamische Typisierung dies zur Laufzeit erlaubt',
+		'Überladen ermöglicht es, Methoden mit dem gleichen Namen, aber unterschiedlichen Parametern zu haben, während Überschreiben eine Methode in einer Unterklasse erlaubt, die eine Methode der Oberklasse ersetzt',
+		'Checked Exceptions müssen explizit im Code behandelt oder weitergegeben werden, während Unchecked Exceptions zur Laufzeit auftreten können, ohne dass sie im Code behandelt werden müssen',
+		'Ein Stack folgt dem LIFO-Prinzip (Last In, First Out), während eine Queue dem FIFO-Prinzip (First In, First Out) folgt'
 	];
 
     // Definieren Sie den Status jeder Tür (false bedeutet, dass die Frage noch nicht richtig beantwortet wurde)
