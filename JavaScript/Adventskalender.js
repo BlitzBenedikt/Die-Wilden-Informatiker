@@ -15,7 +15,11 @@ $(document).ready(function() {
 		'Erklären Sie den Unterschied zwischen statischer und dynamischer Typisierung.',
 		'Was ist der Unterschied zwischen Überladen und Überschreiben von Methoden in Java?',
 		'Können Sie den Unterschied zwischen Checked und Unchecked Exceptions in Java erklären?',
-		'Was ist der Unterschied zwischen einem Stack und einer Queue?'
+		'Was ist der Unterschied zwischen einem Stack und einer Queue?',
+		'Was ist der Unterschied zwischen final, finally und finalize in Java?',
+		'Was ist der Unterschied zwischen throw und throws in Java?',
+		'Was ist der Unterschied zwischen einem Checked und einem Unchecked Exception in Java?',
+		'Was ist der Unterschied zwischen einem Array und einer ArrayList in Java?'
 	];
 
 	let stories = [
@@ -28,7 +32,11 @@ $(document).ready(function() {
 		'AlpaChino lehrte seine Kinder die Kunst der Typisierung. "Mit statischer Typisierung werdet ihr Stabilität finden, mit dynamischer Typisierung Flexibilität," erklärte er. "Wählt weise, je nachdem, was euer Code erreichen soll."',
 		'Am fünften Tag zeigte AlpaChino seinen Kindern, wie man Methoden überlädt und überschreibt. "Überladet, um Vielfalt zu schaffen, überschreibt, um zu spezialisieren," sagte er und segnete sie mit dem Wissen um Polymorphie.',
 		'AlpaChino sprach von den Ausnahmen, die auftreten können. "Checked Exceptions sind wie Warnungen, die euch zur Vorsicht mahnen. Unchecked Exceptions sind wie versteckte Fallen, seid immer auf der Hut," warnte er sie.',
-		'Am sechsten Tag lehrte AlpaChino seine Kinder über Strukturen der Datenspeicherung. "Ein Stack ist wie ein Stapel Teller, eine Queue wie eine Schlange vor dem Kino. Verwendet sie klug, um eure Daten zu organisieren," riet er ihnen.'
+		'Am sechsten Tag lehrte AlpaChino seine Kinder über Strukturen der Datenspeicherung. "Ein Stack ist wie ein Stapel Teller, eine Queue wie eine Schlange vor dem Kino. Verwendet sie klug, um eure Daten zu organisieren," riet er ihnen.',
+		'Am siebten Tag sprach AlpaChino: "Es werde Beständigkeit!" Und es ward Beständigkeit. Er lehrte seine Kinder, den Unterschied zwischen `final`, `finally` und `finalize` in Java zu verstehen. "Benutzt `final`, um eine Konstante zu deklarieren oder Vererbung und Überschreiben zu verhindern, `finally`, um sicherzustellen, dass ein Codeblock ausgeführt wird, und `finalize`, um Aktionen vor der Garbage Collection durchzuführen,',
+		'AlpaChino sprach von den Nuancen der Fehlerbehandlung. "Ein throw wird verwendet, um explizit eine Exception auszulösen, während throws in der Methodensignatur angibt, welche Exceptions von der Methode geworfen werden können," erklärte er. "Verwendet sie weise, um euren Code zu strukturieren."',
+		'Am achten Tag sprach AlpaChino: "Es bringe die Erde hervor verschiedene Arten von Exceptions, jede nach ihrer Art. Und es geschah so. AlpaChino machte die Exceptions nach ihrer Art, jede mit ihren eigenen Eigenschaften. Und AlpaChino sah, dass es gut war. Dann segnete AlpaChino sie und sprach: "Seid fruchtbar und mehret euch und füllet die Erde mit Daten und herrschet über die Algorithmen im Meer und über die Funktionen unter dem Himmel und über alles Getier, das auf Erden kriecht."',
+		'Am neunten Tag sprach AlpaChino: "Es werde Flexibilität!" Und es ward Flexibilität. Er lehrte seine Kinder, den Unterschied zwischen einem Array und einer ArrayList zu verstehen. "Ein Array hat eine feste Größe, während eine ArrayList ihre Größe dynamisch ändern kann," sagte er. "Verwendet sie weise, um eure Daten zu speichern."'
 	];
 
 	let answers = [
@@ -41,7 +49,11 @@ $(document).ready(function() {
 		['Es gibt keinen Unterschied','Statische Typisierung bedeutet, dass der Datentyp einer Variable bei der Kompilierung bekannt sein muss, während dynamische Typisierung dies zur Laufzeit erlaubt', 'Statische Typisierung ist langsamer', 'Dynamische Typisierung kann nicht in Java verwendet werden'],
 		['Es gibt keinen Unterschied', 'Überladen ist nur in JavaScript möglich', 'Überschreiben ist nur in C++ möglich','Überladen ermöglicht es, Methoden mit dem gleichen Namen, aber unterschiedlichen Parametern zu haben, während Überschreiben eine Methode in einer Unterklasse erlaubt, die eine Methode der Oberklasse ersetzt'],
 		['Es gibt keinen Unterschied', 'Checked Exceptions sind schneller','Checked Exceptions müssen explizit im Code behandelt oder weitergegeben werden, während Unchecked Exceptions zur Laufzeit auftreten können, ohne dass sie im Code behandelt werden müssen',  'Unchecked Exceptions können ignoriert werden'],
-		['Es gibt keinen Unterschied', 'Stacks können nur Zahlen speichern', 'Queues sind langsamer','Ein Stack folgt dem LIFO-Prinzip (Last In, First Out), während eine Queue dem FIFO-Prinzip (First In, First Out) folgt']
+		['Es gibt keinen Unterschied', 'Stacks können nur Zahlen speichern', 'Queues sind langsamer','Ein Stack folgt dem LIFO-Prinzip (Last In, First Out), während eine Queue dem FIFO-Prinzip (First In, First Out) folgt'],
+		['final wird verwendet, um eine Konstante zu deklarieren, finally wird in einem try-catch-Block verwendet, um sicherzustellen, dass der Code ausgeführt wird, und finalize ist eine Methode, die vor der Garbage Collection aufgerufen wird', 'Es gibt keinen Unterschied', 'final kann nur für Zahlen verwendet werden', 'finally ist schneller als finalize'],
+		['throw wird verwendet, um explizit eine Exception auszulösen, während throws in der Methodensignatur angibt, welche Exceptions von der Methode geworfen werden können', 'Es gibt keinen Unterschied', 'throw kann nur in try-catch-Blöcken verwendet werden', 'throws ist schneller als throw'],
+		['Checked Exceptions müssen explizit im Code behandelt oder deklariert werden, während Unchecked Exceptions zur Laufzeit auftreten können, ohne dass sie im Code behandelt werden müssen', 'Es gibt keinen Unterschied', 'Checked Exceptions sind schneller', 'Unchecked Exceptions können ignoriert werden'],
+		['Ein Array hat eine feste Größe, während eine ArrayList ihre Größe dynamisch ändern kann', 'Es gibt keinen Unterschied', 'Arrays können nur Zahlen speichern', 'ArrayLists sind langsamer als Arrays']
 
 	];
 
@@ -55,7 +67,11 @@ $(document).ready(function() {
 		'Statische Typisierung bedeutet, dass der Datentyp einer Variable bei der Kompilierung bekannt sein muss, während dynamische Typisierung dies zur Laufzeit erlaubt',
 		'Überladen ermöglicht es, Methoden mit dem gleichen Namen, aber unterschiedlichen Parametern zu haben, während Überschreiben eine Methode in einer Unterklasse erlaubt, die eine Methode der Oberklasse ersetzt',
 		'Checked Exceptions müssen explizit im Code behandelt oder weitergegeben werden, während Unchecked Exceptions zur Laufzeit auftreten können, ohne dass sie im Code behandelt werden müssen',
-		'Ein Stack folgt dem LIFO-Prinzip (Last In, First Out), während eine Queue dem FIFO-Prinzip (First In, First Out) folgt'
+		'Ein Stack folgt dem LIFO-Prinzip (Last In, First Out), während eine Queue dem FIFO-Prinzip (First In, First Out) folgt',
+		'final wird verwendet, um eine Konstante zu deklarieren, finally wird in einem try-catch-Block verwendet, um sicherzustellen, dass der Code ausgeführt wird, und finalize ist eine Methode, die vor der Garbage Collection aufgerufen wird',
+		'throw wird verwendet, um explizit eine Exception auszulösen, während throws in der Methodensignatur angibt, welche Exceptions von der Methode geworfen werden können',
+		'Checked Exceptions müssen explizit im Code behandelt oder deklariert werden, während Unchecked Exceptions zur Laufzeit auftreten können, ohne dass sie im Code behandelt werden müssen',
+		'Ein Array hat eine feste Größe, während eine ArrayList ihre Größe dynamisch ändern kann'
 	];
 
     // Definieren Sie den Status jeder Tür (false bedeutet, dass die Frage noch nicht richtig beantwortet wurde)
@@ -94,7 +110,7 @@ $(document).ready(function() {
 		let selectedAnswer = $('input[name="answer"]:checked').val();
 		// Überprüfen Sie die Antwort
 		if (selectedAnswer === correctAnswers[doorNumber - 1]) {
-			$('#question').get(0).innerHTML = '<b>Richtig! Zur belohnung eine predigt des Großen AlpaChino:  </b>' + stories[doorNumber - 1] ;
+			$('#question').get(0).innerHTML = '<b>Richtig! Zur belohnung eine Predigt des großen AlpaChino:  </b>' + stories[doorNumber - 1] ;
 			$('#answers').empty();
 			$('#submitAnswer').hide();
 			// Markieren Sie die Frage als richtig beantwortet
