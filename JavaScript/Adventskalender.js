@@ -110,7 +110,7 @@ $(document).ready(function() {
 		let selectedAnswer = $('input[name="answer"]:checked').val();
 		// Überprüfen Sie die Antwort
 		if (selectedAnswer === correctAnswers[doorNumber - 1]) {
-			$('#question').get(0).innerHTML = '<b>Richtig! Zur belohnung eine Predigt des großen AlpaChino:  </b>' + stories[doorNumber - 1] ;
+			$('#question').get(0).innerHTML = '<b>Richtig! Zur Belohnung eine Predigt des großen AlpaChino:  </b>' + stories[doorNumber - 1] ;
 			$('#answers').empty();
 			$('#submitAnswer').hide();
 			// Markieren Sie die Frage als richtig beantwortet
