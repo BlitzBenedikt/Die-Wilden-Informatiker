@@ -5,7 +5,7 @@ $(document).ready(function() {
     }
 
     // Definiert die Fragen und Geschichten
-		let questions = [
+	let questions = [
 		'Was ist der Unterschied zwischen einer Instanzvariablen und einer Klassenvariablen in Java?',
 		'Können Sie den Unterschied zwischen einer for-Schleife und einer while-Schleife in Java erklären?',
 		'Was ist der Unterschied zwischen einer Instanzmethode und einer Klassenmethode in Java?',
@@ -19,7 +19,17 @@ $(document).ready(function() {
 		'Was ist der Unterschied zwischen final, finally und finalize in Java?',
 		'Was ist der Unterschied zwischen throw und throws in Java?',
 		'Was ist der Unterschied zwischen einem Checked und einem Unchecked Exception in Java?',
-		'Was ist der Unterschied zwischen einem Array und einer ArrayList in Java?'
+		'Was ist der Unterschied zwischen einem Array und einer ArrayList in Java?',
+		'Was ist der Unterschied zwischen einer statischen und einer nicht-statischen Methode in Java?',
+		'Können Sie den Unterschied zwischen == und equals() in Java erklären?',
+		'Was ist der Unterschied zwischen einem abstrakten und einem konkreten Methoden in Java?',
+		'Können Sie den Unterschied zwischen einem primitiven Datentyp und einem Wrapper-Klasse in Java erklären?',
+		'Was ist der Unterschied zwischen einem Konstruktor und einer Methode in Java?',
+		'Was ist der Unterschied zwischen einem lokalen und einem globalen Variablen in Java?',
+		'Erklären Sie den Unterschied zwischen Vererbung und Polymorphie.',
+		'Was ist der Unterschied zwischen einem synchronisierten Block und einer synchronisierten Methode in Java?',
+		'Können Sie den Unterschied zwischen einem abstrakten Klasse und einem Interface in Java erklären?',
+		'Was ist der Unterschied zwischen einem Fehler und einer Ausnahme in Java?'
 	];
 
 	let stories = [
@@ -36,7 +46,17 @@ $(document).ready(function() {
 		'Am siebten Tag sprach AlpaChino: "Es werde Beständigkeit!" Und es ward Beständigkeit. Er lehrte seine Kinder, den Unterschied zwischen `final`, `finally` und `finalize` in Java zu verstehen. "Benutzt `final`, um eine Konstante zu deklarieren oder Vererbung und Überschreiben zu verhindern, `finally`, um sicherzustellen, dass ein Codeblock ausgeführt wird, und `finalize`, um Aktionen vor der Garbage Collection durchzuführen,',
 		'AlpaChino sprach von den Nuancen der Fehlerbehandlung. "Ein throw wird verwendet, um explizit eine Exception auszulösen, während throws in der Methodensignatur angibt, welche Exceptions von der Methode geworfen werden können," erklärte er. "Verwendet sie weise, um euren Code zu strukturieren."',
 		'Am achten Tag sprach AlpaChino: "Es bringe die Erde hervor verschiedene Arten von Exceptions, jede nach ihrer Art. Und es geschah so. AlpaChino machte die Exceptions nach ihrer Art, jede mit ihren eigenen Eigenschaften. Und AlpaChino sah, dass es gut war. Dann segnete AlpaChino sie und sprach: "Seid fruchtbar und mehret euch und füllet die Erde mit Daten und herrschet über die Algorithmen im Meer und über die Funktionen unter dem Himmel und über alles Getier, das auf Erden kriecht."',
-		'Am neunten Tag sprach AlpaChino: "Es werde Flexibilität!" Und es ward Flexibilität. Er lehrte seine Kinder, den Unterschied zwischen einem Array und einer ArrayList zu verstehen. "Ein Array hat eine feste Größe, während eine ArrayList ihre Größe dynamisch ändern kann," sagte er. "Verwendet sie weise, um eure Daten zu speichern."'
+		'Am neunten Tag sprach AlpaChino: "Es werde Flexibilität!" Und es ward Flexibilität. Er lehrte seine Kinder, den Unterschied zwischen einem Array und einer ArrayList zu verstehen. "Ein Array hat eine feste Größe, während eine ArrayList ihre Größe dynamisch ändern kann," sagte er. "Verwendet sie weise, um eure Daten zu speichern."',
+		'In einer digitalen Welt voller Codes und Algorithmen lebte ein Gott der Informatik namens AlpaChino. Er war bekannt für seine unübertroffene Fähigkeit, komplexe Probleme mit Leichtigkeit zu lösen.',
+		'AlpaChino, der Gott der Informatik, war ein Meister der künstlichen Intelligenz. Er schuf intelligente Maschinen, die dazu beitrugen, das Leben der Menschen zu verbessern.',
+		'In einer Welt, die von Daten regiert wird, war AlpaChino der Hüter des Wissens. Mit seiner Weisheit und seinem Verständnis der Informatik half er den Menschen, die Macht der Daten zu nutzen.',
+		'AlpaChino, der Gott der Informatik, war ein Pionier der Cyber-Sicherheit. Er schützte die digitale Welt vor böswilligen Angriffen und sorgte für Sicherheit und Vertrauen in der digitalen Welt.',
+		'In der Welt der Softwareentwicklung war AlpaChino ein legendärer Gott. Mit seiner Fähigkeit, fehlerfreien Code zu schreiben, revolutionierte er die Art und Weise, wie Software entwickelt wurde.',
+		'AlpaChino, der Gott der Informatik, war ein Meister der Netzwerke. Er verband die Welt durch das Internet und ermöglichte es den Menschen, trotz großer Entfernungen miteinander zu kommunizieren.',
+		'In einer Welt, die von Technologie abhängig ist, war AlpaChino der Gott der Informatik, der die Menschen lehrte, wie man Technologie nutzt, um ihr Leben zu verbessern.',
+		'AlpaChino, der Gott der Informatik, war ein Visionär. Er sah die Möglichkeiten der digitalen Transformation und führte die Welt in das Zeitalter der Digitalisierung.',
+		'In der komplexen Welt der Algorithmen war AlpaChino der Gott der Informatik, der die Menschen lehrte, wie man Algorithmen nutzt, um Probleme zu lösen.',
+		'AlpaChino, der Gott der Informatik, war ein Meister der Datenanalyse. Er half den Menschen, die verborgenen Muster und Trends in den Daten zu entdecken und fundierte Entscheidungen zu treffen.'
 	];
 
 	let answers = [
@@ -53,7 +73,17 @@ $(document).ready(function() {
 		['final wird verwendet, um eine Konstante zu deklarieren, finally wird in einem try-catch-Block verwendet, um sicherzustellen, dass der Code ausgeführt wird, und finalize ist eine Methode, die vor der Garbage Collection aufgerufen wird', 'Es gibt keinen Unterschied', 'final kann nur für Zahlen verwendet werden', 'finally ist schneller als finalize'],
 		['throw wird verwendet, um explizit eine Exception auszulösen, während throws in der Methodensignatur angibt, welche Exceptions von der Methode geworfen werden können', 'Es gibt keinen Unterschied', 'throw kann nur in try-catch-Blöcken verwendet werden', 'throws ist schneller als throw'],
 		['Checked Exceptions müssen explizit im Code behandelt oder deklariert werden, während Unchecked Exceptions zur Laufzeit auftreten können, ohne dass sie im Code behandelt werden müssen', 'Es gibt keinen Unterschied', 'Checked Exceptions sind schneller', 'Unchecked Exceptions können ignoriert werden'],
-		['Ein Array hat eine feste Größe, während eine ArrayList ihre Größe dynamisch ändern kann', 'Es gibt keinen Unterschied', 'Arrays können nur Zahlen speichern', 'ArrayLists sind langsamer als Arrays']
+		['Ein Array hat eine feste Größe, während eine ArrayList ihre Größe dynamisch ändern kann', 'Es gibt keinen Unterschied', 'Arrays können nur Zahlen speichern', 'ArrayLists sind langsamer als Arrays'],
+		['Eine statische Methode gehört zu der Klasse selbst und kann ohne eine Instanz der Klasse aufgerufen werden', 'Statische Methoden können nur Zahlen speichern', 'Es gibt keinen Unterschied', 'Nicht-statische Methoden sind sicherer'],
+		['== prüft auf Gleichheit der Referenzen, nicht der Werte, während equals() verwendet wird, um den Inhalt von zwei Objekten zu vergleichen', '== kann nicht für Arrays verwendet werden', 'Es gibt keinen Unterschied', 'equals() ist schneller'],
+		['Eine abstrakte Methode ist eine Methode, die in einer abstrakten Klasse oder einem Interface deklariert, aber nicht implementiert ist', 'Abstrakte Methoden können nicht wiederverwendet werden', 'Es gibt keinen Unterschied', 'Konkrete Methoden sind abstrakte Methoden, die zu keiner Klasse gehören'],
+		['Ein primitiver Datentyp ist vordefiniert von Java und benannt durch ein reserviertes Schlüsselwort. Ein Wrapper-Klasse bietet eine Möglichkeit, primitive Daten in ein Objekt zu verpacken', 'Primitive Datentypen können nur Zahlen speichern', 'Es gibt keinen Unterschied', 'Wrapper-Klassen sind langsamer'],
+		['Ein Konstruktor wird aufgerufen, wenn ein neues Objekt erstellt wird, und es gibt keinen Rückgabewert', 'Konstruktoren können nur Zahlen speichern', 'Es gibt keinen Unterschied', 'Methoden sind sicherer als Konstruktoren'],
+		['Eine lokale Variable wird innerhalb von Methoden, Konstruktoren oder Blöcken deklariert und hat nur innerhalb der Methode, des Konstruktors oder des Blocks Gültigkeit', 'Lokale Variablen können nur Zahlen speichern', 'Es gibt keinen Unterschied', 'Globale Variablen sind sicherer als lokale Variablen'],
+		['Vererbung ist ein Mechanismus, bei dem eine neue Klasse von einer bestehenden Klasse abgeleitet wird', 'Vererbung kann nicht in Java verwendet werden', 'Es gibt keinen Unterschied', 'Polymorphie ist schneller als Vererbung'],
+		['Ein synchronisierter Block ist ein Block von Code, der mit dem Schlüsselwort synchronized markiert ist', 'Synchronisierte Blöcke können nur Zahlen speichern', 'Es gibt keinen Unterschied', 'Synchronisierte Methoden sind sicherer als synchronisierte Blöcke'],
+		['Ein Interface ist eine Referenztyp in Java, ähnlich einer Klasse, und wird verwendet, um die Spezifikation von Methoden zu deklarieren', 'Interfaces können Variablen speichern', 'Es gibt keinen Unterschied', 'Abstrakte Klassen können nicht erweitert werden'],
+		['Ein Fehler ist ein schwerwiegenderes Problem, das nicht behandelt werden kann', 'Fehler können ignoriert werden', 'Es gibt keinen Unterschied', 'Ausnahmen sind sicherer als Fehler']
 
 	];
 
@@ -71,7 +101,17 @@ $(document).ready(function() {
 		'final wird verwendet, um eine Konstante zu deklarieren, finally wird in einem try-catch-Block verwendet, um sicherzustellen, dass der Code ausgeführt wird, und finalize ist eine Methode, die vor der Garbage Collection aufgerufen wird',
 		'throw wird verwendet, um explizit eine Exception auszulösen, während throws in der Methodensignatur angibt, welche Exceptions von der Methode geworfen werden können',
 		'Checked Exceptions müssen explizit im Code behandelt oder deklariert werden, während Unchecked Exceptions zur Laufzeit auftreten können, ohne dass sie im Code behandelt werden müssen',
-		'Ein Array hat eine feste Größe, während eine ArrayList ihre Größe dynamisch ändern kann'
+		'Ein Array hat eine feste Größe, während eine ArrayList ihre Größe dynamisch ändern kann',
+		'Eine statische Methode gehört zu der Klasse selbst und kann ohne eine Instanz der Klasse aufgerufen werden',
+		'== prüft auf Gleichheit der Referenzen, nicht der Werte, während equals() verwendet wird, um den Inhalt von zwei Objekten zu vergleichen',
+		'Eine abstrakte Methode ist eine Methode, die in einer abstrakten Klasse oder einem Interface deklariert, aber nicht implementiert ist',
+		'Ein primitiver Datentyp ist vordefiniert von Java und benannt durch ein reserviertes Schlüsselwort. Ein Wrapper-Klasse bietet eine Möglichkeit, primitive Daten in ein Objekt zu verpacken',
+		'Ein Konstruktor wird aufgerufen, wenn ein neues Objekt erstellt wird, und es gibt keinen Rückgabewert',
+		'Eine lokale Variable wird innerhalb von Methoden, Konstruktoren oder Blöcken deklariert und hat nur innerhalb der Methode, des Konstruktors oder des Blocks Gültigkeit',
+		'Vererbung ist ein Mechanismus, bei dem eine neue Klasse von einer bestehenden Klasse abgeleitet wird',
+		'Ein synchronisierter Block ist ein Block von Code, der mit dem Schlüsselwort synchronized markiert ist',
+		'Ein Interface ist eine Referenztyp in Java, ähnlich einer Klasse, und wird verwendet, um die Spezifikation von Methoden zu deklarieren',
+		'Ein Fehler ist ein schwerwiegenderes Problem, das nicht behandelt werden kann'
 	];
 
     // Definieren Sie den Status jeder Tür (false bedeutet, dass die Frage noch nicht richtig beantwortet wurde)
