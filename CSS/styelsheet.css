@@ -17,7 +17,7 @@ h4 {
 .schnee {
         background-image: url('../Bilder/Schnee001.png');
         background-size: auto 90px;
-        position: relative;
+        position: sticky;
         border: 95px;
         display: inline-block;
 	height: 20px;
@@ -29,6 +29,7 @@ h4 {
         background-size: cover;
 		background-repeat: no-repeat;
         color: white;
+        position: sticky;
 }
 .navbar-brand {
         color: white;
