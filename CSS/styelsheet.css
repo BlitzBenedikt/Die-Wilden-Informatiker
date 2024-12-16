@@ -20,9 +20,9 @@ h4 {
         position: sticky;
         border: 95px;
         display: inline-block;
-	height: 10px;
+	height: 15px;
 	width: auto;
-        padding: 30px 45%;
+        padding: 15px 50%;
 }
 .navbar {
         background-image: url('../Bilder/Schneelandschaft001+002+003+004.png.jpg');
