@@ -16,7 +16,7 @@ h4 {
 }
 .schnee {
         background-image: url('../Bilder/Schnee001.png');
-        background-size: auto 90px;
+        background-size: auto 45px;
         position: sticky;
         border: 95px;
         display: inline-block;
